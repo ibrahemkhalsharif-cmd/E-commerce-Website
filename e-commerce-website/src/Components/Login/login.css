@@ -1,0 +1,92 @@
+body , html{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, #ADD8E6, #F0F8FF);
+   
+}
+h1{
+    border-bottom: solid;
+    
+}
+.container{
+    display:flex;
+    
+    flex-direction: column;
+    width:130%;
+    height: 40vh;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.forgot-password{
+    display: flex;
+    width: 80%;
+    flex-direction: flex-start;
+}
+.forgot-password a{
+    text-decoration: none;
+    color: brown;
+    font-size: 0.8rem;
+}
+.forgot-password a:hover{
+    text-decoration: underline;
+    color: red;
+}
+input{
+    margin:10px;
+    padding:10px;
+    width:80%;
+    border-radius: 5px;
+    border:1px solid gray;
+}
+.submit{
+    margin-top: 1rem;
+    background-color: brown;
+    color: white;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    width:30%;
+    height: 3vw;
+}
+.button-notacitve{
+     margin-top: 1rem;
+      border:none;
+    border-radius: 20px;
+    cursor: pointer;
+    width:30%;
+    height: 3vw;
+
+}
+.button-notacitve:hover{
+    background-color: brown;
+    color: white;
+    transition: 0.3s;
+}
+.submit:hover{
+    background-color: red;
+    transition: 0.3s;
+}
+.submit:active{
+    transform: scale(0.98);
+    transition: 0.1s;}
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hidden{
+    display: none;
+}
+.error{
+    color:red ;
+}
