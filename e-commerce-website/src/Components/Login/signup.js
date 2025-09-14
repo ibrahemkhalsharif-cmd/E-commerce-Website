@@ -95,12 +95,12 @@ export default function Signup() {
                 />
             )}
             <div className='forgot-password'>
-                <a href='#' className={action == "Signup" ? 'hidden' : "forgot-password"} onClick={() => { setAction("Forgot password") }}>Forgot Password?</a>
+                <a href='#' className={action == "Signup" || action == "Forgot password" ? 'hidden' : "forgot-password"} onClick={() => { setAction("Forgot password") }}>Forgot Password?</a>
             </div>
             {!(action == "Forgot password") && (
                 <div className='buttons'>
-                    <button type="submit" id="submit" className={action == 'Login' ? 'submit' : 'button-notacitve'} onClick={() => { setAction("Login"); handleLogin(); }}>Login</button>
-                    <button type="submit" id='submit' className={action == 'Signup' ? 'submit' : 'button-notacitve'} onClick={() => {
+                    <button type="submit" id="submit" className={action == 'Login' ? 'submit login' : 'button-notacitve'} onClick={() => { setAction("Login"); handleLogin(); }}>Login</button>
+                    <button type="submit" id='submit' className={action == 'Signup' ? 'submit signup' : 'button-notacitve'} onClick={() => {
                         setAction("Signup"); handleSignup();
                     }}>Signup</button>
                 </div>

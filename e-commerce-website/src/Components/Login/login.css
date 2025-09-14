@@ -7,7 +7,8 @@ body , html{
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background-image: linear-gradient(to right, #ADD8E6, #F0F8FF);
+    /*background-image: linear-gradient(to right, #000000, #F0F8FF);*/
+    background-color: #4A0404
    
 }
 h1{
@@ -16,6 +17,7 @@ h1{
 }
 .container{
     display:flex;
+    background-color: rgb(255, 255, 255);
     
     flex-direction: column;
     width:130%;
@@ -31,12 +33,12 @@ h1{
 }
 .forgot-password a{
     text-decoration: none;
-    color: brown;
+    color: red;
     font-size: 0.8rem;
 }
 .forgot-password a:hover{
     text-decoration: underline;
-    color: red;
+    color: black;
 }
 input{
     margin:10px;
@@ -55,6 +57,9 @@ input{
     width:30%;
     height: 3vw;
 }
+.login{
+    background-color: black;
+}
 .button-notacitve{
      margin-top: 1rem;
       border:none;
@@ -65,12 +70,12 @@ input{
 
 }
 .button-notacitve:hover{
-    background-color: brown;
+    background-color: #4A0404;
     color: white;
     transition: 0.3s;
 }
 .submit:hover{
-    background-color: red;
+    background-color: #4A0404;
     transition: 0.3s;
 }
 .submit:active{
