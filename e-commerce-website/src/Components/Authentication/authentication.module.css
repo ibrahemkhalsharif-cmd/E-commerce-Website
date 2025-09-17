@@ -26,17 +26,17 @@ h1{
     border-radius: 20px;
     border: 1px solid black;
 }
-.forgot-password{
+.forgotpassword{
     display: flex;
     width: 80%;
     flex-direction: flex-start;
 }
-.forgot-password a{
+.forgotpassword a{
     text-decoration: none;
     color: red;
     font-size: 0.8rem;
 }
-.forgot-password a:hover{
+.forgotpassword a:hover{
     text-decoration: underline;
     color: black;
 }
@@ -57,10 +57,9 @@ input{
     width:30%;
     height: 3vw;
 }
-.login{
+
+.buttonnotactive{
     background-color: black;
-}
-.button-notacitve{
      margin-top: 1rem;
       border:none;
     border-radius: 20px;
@@ -69,7 +68,7 @@ input{
     height: 3vw;
 
 }
-.button-notacitve:hover{
+.buttonnotactive:hover{
     background-color: #4A0404;
     color: white;
     transition: 0.3s;
