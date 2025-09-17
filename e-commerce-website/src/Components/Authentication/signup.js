@@ -36,6 +36,10 @@ export default function Signup({ setActiveTab, activeTab }) {
         setError('');
 
     }
+    const handleNavigate =()=>{
+        navigate('/login');
+        setActiveTab('login');
+    }
 
     return (
         <div className={styles.container}>
@@ -54,19 +58,9 @@ export default function Signup({ setActiveTab, activeTab }) {
 
 
             <div className={styles.buttons}>
-                <button type="submit" id="submit" className={`${styles.submit} ${activeTab == 'login' ? styles.login : styles.buttonnotactive}`} onClick={() => {
-                    navigate('/login');
-                    setActiveTab('login');
-                }}>Login</button>
-                <button type="submit" id='submit' className={`${styles.submit} ${activeTab == 'signup' ? styles.signup : styles.buttonnotactive}`} onClick={() => {
-                    handleSignup();
-                }}>Signup</button>
+                <button type="button" id="submit" className={ `${activeTab == 'login' ? styles.submit : styles.buttonNotActive }`} onClick={handleNavigate}>Login</button>
+                <button type="submit" id='submit' className={`${activeTab == 'signup' ? styles.submit : styles.buttonNotActive}`} onClick={() => {handleSignup();}}>Signup</button>
             </div>
-
-
-
-
-
 
         </div>
     );
