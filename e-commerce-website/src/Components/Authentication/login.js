@@ -27,37 +27,7 @@ export default function Login({ setActiveTab, activeTab }) {
             }
         
     }
-    // const handleForgotPassword = () => {
-    //     const users = JSON.parse(localStorage.getItem('userData')) || [];
-    //     if (resetStage == 1) {
-    //         const user_found = users.find((user) => user.email == email);
-    //         if (user_found) {
-    //             setError('');
-    //             setResetStage(2);
-    //         }
-    //         else {
-    //             setError('Email not found');
-    //         }
-
-
-    //     }
-    //     else if (resetStage == 2) {
-    //         users.forEach((user) => {
-    //             if (user.email == email) {
-    //                 user.password = password;
-    //             }
-    //         });
-
-    //         localStorage.setItem('userData', JSON.stringify(users));
-    //         alert('Password reset successful!');
-    //         setEmail('');
-    //         setUser('');
-    //         setPassword('');
-    //         setError('');
-    //         setAction('Login');
-    //         setResetStage(1);
-    //     }
-    // }
+    
     const handleNavigateSignup =()=>{
         navigate('/signup');
         setActiveTab('signup');
@@ -102,10 +72,3 @@ export default function Login({ setActiveTab, activeTab }) {
         </div>
     );
 }
-//responsive design check
-//change class names check
-//change it to button check
-//remove the styles that dont exist check
-//Handle navagation after login/signup check
-//add a forgot password component check
-//remove action check
