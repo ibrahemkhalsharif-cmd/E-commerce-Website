@@ -1,7 +1,7 @@
 import styles from './authentication.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-export default function ForgotPassword({ setActiveTab, activeTab }) {
+export default function ForgotPassword() {
     const [error, setError] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

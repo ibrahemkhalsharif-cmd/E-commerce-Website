@@ -1,12 +1,14 @@
 import {  useState } from 'react';
 import styles from './authentication.module.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export default function Login({ setActiveTab, activeTab }) {
+export default function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
+    const location = useLocation();
+    const currentPath = location.pathname;
     const navigate = useNavigate();
 
 
@@ -30,14 +32,14 @@ export default function Login({ setActiveTab, activeTab }) {
     
     const handleNavigateSignup =()=>{
         navigate('/signup');
-        setActiveTab('signup');
+        
     }
     const handleLoginClick =()=>{
-        setActiveTab('login');
+      
         handleLogin();
     }
     const handleForgotPasswordClick =()=>{
-        setActiveTab('forgotPassword');
+        
         navigate('/forgot-password');
         
     }
@@ -63,8 +65,8 @@ export default function Login({ setActiveTab, activeTab }) {
             
            
                 <div className={styles.buttons}>
-                    <button type="submit" id="submit" className={` ${activeTab == 'login' ?  styles.submit : styles.buttonNotActive}`} onClick={ handleLoginClick }>Login</button>
-                    <button type="button" id='submit' className={` ${activeTab == 'signup' ?  styles.submit: styles.buttonNotActive}`} onClick={handleNavigateSignup}>Signup</button>
+                    <button type="submit" id="submit" className={` ${currentPath == "/login" ?  styles.submit : styles.buttonNotActive}`} onClick={ handleLoginClick }>Login</button>
+                    <button type="button" id='submit' className={` ${currentPath == "/signup" ?  styles.submit: styles.buttonNotActive}`} onClick={handleNavigateSignup}>Signup</button>
                 </div>
             
     
