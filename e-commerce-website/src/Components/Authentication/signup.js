@@ -1,5 +1,5 @@
-import { useState  } from 'react';
-import { useNavigate , useLocation} from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './authentication.module.css'
 
 export default function Signup() {
@@ -39,9 +39,9 @@ export default function Signup() {
         navigate('/login');
 
     }
-    const handleNavigate =()=>{
+    const handleNavigate = () => {
         navigate('/login');
-      
+
     }
 
     return (
@@ -58,8 +58,8 @@ export default function Signup() {
                 onChange={(e) => setPassword(e.target.value)}
             />
             <div className={styles.buttons}>
-                <button type="button" id="submit" className={ `${currentPath == "/login" ? styles.submit : styles.buttonNotActive }`} onClick={handleNavigate}>Login</button>
-                <button type="submit" id='submit' className={`${ currentPath == "/signup" ? styles.submit : styles.buttonNotActive}`} onClick={() => {handleSignup();}}>Signup</button>
+                <button type="button" id="submit" className={`${currentPath == "/login" ? styles.submit : styles.buttonNotActive}`} onClick={handleNavigate}>Login</button>
+                <button type="submit" id='submit' className={`${currentPath == "/signup" ? styles.submit : styles.buttonNotActive}`} onClick={() => { handleSignup(); }}>Signup</button>
             </div>
 
         </div>
