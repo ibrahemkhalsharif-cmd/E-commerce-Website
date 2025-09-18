@@ -114,9 +114,6 @@ input {
     gap: 5px;
 }
 
-.hidden {
-    display: none;
-}
 
 .error {
     color: red;
