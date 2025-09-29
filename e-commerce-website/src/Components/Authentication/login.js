@@ -19,6 +19,7 @@ export default function Login() {
             setEmail('');
             setPassword('');
             setError('');
+            navigate('/Mainpage');
         }
         else {
             setError('Invalid email or password');
@@ -40,27 +41,31 @@ export default function Login() {
 
     }
     return (
-        <div className={styles.container}>
-            <h1>Login</h1>
-            <p className={styles.error}>{error}</p>
-            <input type="email" id="email" placeholder="Email" className={styles.email} value={email} onChange={(e) => { setEmail(e.target.value) }}></input>
+        <div className={styles.authenticationContainer}>
+            <div className={styles.container}>
+                <h1 className={styles.loginHeader}>Login</h1>
+                <p className={styles.error}>{error}</p>
+                <input type="email" id="email" placeholder="Email" className={styles.email} value={email} onChange={(e) => { setEmail(e.target.value) }}></input>
 
-            <input
-                type="password"
-                placeholder="Password"
-                className={styles.password}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    className={styles.password}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
 
-            <div className={styles.forgotPassword}>
-                <button className={styles.forgetPasswordButton} onClick={handleForgotPasswordClick}>Forget password?</button>
-            </div>
-            <div className={styles.buttons}>
-                <button type="submit" id="submit" className={` ${currentPath == "/login" ? styles.submit : styles.buttonNotActive}`} onClick={handleLoginClick}>Login</button>
-                <button type="button" id='submit' className={` ${currentPath == "/signup" ? styles.submit : styles.buttonNotActive}`} onClick={handleNavigateSignup}>Signup</button>
+                <div className={styles.forgotPassword}>
+                    <button className={styles.forgetPasswordButton} onClick={handleForgotPasswordClick}>Forget password?</button>
+                </div>
+                <div className={styles.buttons}>
+                    <button type="submit" id="submit" className={` ${currentPath == "/login" ? styles.submit : styles.buttonNotActive}`} onClick={handleLoginClick}>Login</button>
+                    <button type="button" id='submit' className={` ${currentPath == "/signup" ? styles.submit : styles.buttonNotActive}`} onClick={handleNavigateSignup}>Signup</button>
+                </div>
+
             </div>
 
         </div>
+
     );
 }

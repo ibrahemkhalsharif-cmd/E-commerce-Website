@@ -43,21 +43,24 @@ export default function ForgotPassword() {
         }
     }
     return (
-        <div className={styles.container}>
-            <h1>Forgot Password</h1>
-            <p className={styles.error}>{error}</p>
-            <input type='email' placeholder='Email' className={styles.email} onChange={(e) => { setEmail(e.target.value) }}></input>
-            {resetStage == 2 && (
-                <input
-                    type="password"
-                    placeholder="New Password"
-                    className={styles.password}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-            )}
-            <button className={styles.resetPassword + ' ' + styles.submit} onClick={handleForgotPassword}>{resetStage == 1 ? "Next" : "Reset password"}</button>
+        <div className={styles.authenticationContainer}>
+            <div className={styles.container}>
+                <h1 className={styles.forgotPasswordHeader}>Forgot Password</h1>
+                <p className={styles.error}>{error}</p>
+                <input type='email' placeholder='Email' className={styles.email} onChange={(e) => { setEmail(e.target.value) }}></input>
+                {resetStage == 2 && (
+                    <input
+                        type="password"
+                        placeholder="New Password"
+                        className={styles.password}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                )}
+                <button className={styles.resetPassword + ' ' + styles.submit} onClick={handleForgotPassword}>{resetStage == 1 ? "Next" : "Reset password"}</button>
 
+            </div>
         </div>
+
     );
 }

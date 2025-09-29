@@ -1,0 +1,23 @@
+.icon {
+    color: #4F517D;
+    display: inline-block;
+    position: relative;
+
+}
+
+.badge {
+    position: absolute;
+    color: black;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.2em 0.4em;
+    line-height: 1;
+    text-align: center;
+   transform: translate(100%, -170%);
+
+
+}
+.icon:hover{
+    color: red;
+}
