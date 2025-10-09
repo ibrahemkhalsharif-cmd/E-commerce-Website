@@ -36,13 +36,9 @@ export default function Mainpage() {
             catch (err) {
                 setError(err);
             }
-
         }
         fetchData();
-
     }, [offset, limit])
-
-
     return (
         <div className={styles.mainContainer}>
             <div className={styles.header}>
@@ -55,7 +51,6 @@ export default function Mainpage() {
                     <button className={styles.iconButtonThree}><BadgeIcon icon={faBagShopping} count={0} /></button>
                     <button className={styles.iconButtonFour}><FontAwesomeIcon icon={faUser} /></button>
                 </div>
-
             </div>
             <div className={styles.middleContainer}>
                 <div className={styles.contentContainer}>
@@ -78,13 +73,8 @@ export default function Mainpage() {
                                 <img src={iconThree} className={styles.smallIcon}></img>
                                 <img src={iconFour} className={styles.smallIcon}></img>
                                 <div className={styles.arrow}><FontAwesomeIcon icon={faArrowRight} /></div>
-
-
                             </div>
-
                         </div>
-
-
                     </div>
                     <div className={styles.imageContainer}>
                         <img src={guy} className={styles.guyImg}></img>
@@ -94,8 +84,6 @@ export default function Mainpage() {
                     </div>
 
                 </div>
-
-
             </div>
             <div className="wave-container">
                 <svg
@@ -116,14 +104,9 @@ export default function Mainpage() {
                         <button className={styles.clothing}>Clothing</button>
                         <button className={styles.accessories}>Accessories</button>
                         <button className={styles.viewAll}>View All</button>
-
-
                     </div>
                 </div>
-
                 <div className={styles.line}>
-
-
                 </div>
                 <div className={styles.cards}>
 
@@ -138,16 +121,12 @@ export default function Mainpage() {
                                 <h3 className={styles.productTitle}>{product.title}</h3>
                                 <div className={styles.addCartSection}>
                                     <p className={styles.productPrice}>${product.price}</p>
-
                                     <button className={styles.cartShoppingButton}><span>+</span><FontAwesomeIcon icon={faBagShopping} className={styles.cartShopping} /></button>
-
                                 </div>
-
                             </div>
 
                         ))}
                 </div>
-
             </div>
             <div className={styles.lastContainer}>
                 <div className={styles.firstSection}>
@@ -161,14 +140,9 @@ export default function Mainpage() {
                             <h2 className={styles.collectorEnthusiast}>Collector & Enthusiast</h2>
                             <p className={styles.lorem}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui faucibus, porttitor dui a, tempor sapien. Vivamus dapibus metus eu odio elementum luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui faucibus, porttitor dui a, tempor sapien. Vivamus dapibus metus eu odio elementum luctus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu dui faucibus, porttitor dui a, tempor sapien. Vivamus dapibus metus eu odio elementum luctus.</p>
 
-
                         </div>
                         <button className={styles.learnMoreLast}>Learn More <FontAwesomeIcon icon={faArrowRight} /></button>
-
-
                     </div>
-
-
                 </div>
                 <div className={styles.secondSection}>
                     <h1 className={styles.testimonials}>Testimonials</h1>
@@ -182,43 +156,35 @@ export default function Mainpage() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tincidunt lorem, id porttitor risus maximus nec.</p>
                         </div>
                         <div className={styles.testimonialsCardTwo}>
-                             <div className={styles.iconSection}>
+                            <div className={styles.iconSection}>
                                 <img src={smallIconTwo} />
                                 <span>Taryn</span>
 
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tincidunt lorem, id porttitor risus maximus nec.</p>
                         </div>
-
-                       
                         <div className={styles.testimonialsCardThree}>
-                             <div className={styles.iconSection}>
+                            <div className={styles.iconSection}>
                                 <img src={smallIconThree} />
                                 <span>Taryn</span>
 
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tincidunt lorem, id porttitor risus maximus nec.</p>
                         </div>
-
-                      
                         <div className={styles.testimonialsCardFour}>
-                             <div className={styles.iconSection}>
+                            <div className={styles.iconSection}>
                                 <img src={smallIconFour} />
                                 <span>Taryn</span>
-
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tincidunt lorem, id porttitor risus maximus nec.</p>
                         </div>
-
-                        
-
                     </div>
-
                 </div>
-
             </div>
-            <Footer/>
-
+            <Footer />
         </div>
     );
 }
+//Make an asset folder and put images there aka in a folder
+//filter it in the use effects
+//footer and header should be in a different component
