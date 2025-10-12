@@ -1,13 +1,12 @@
 
 import styles from './mainpage.module.css';
-import { faMagnifyingGlass, faHeart, faBagShopping, faUser, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faBagShopping, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 import smallIcon from '../images/smalliconimg-1.jpg'
 import iconOne from '../images/iconOne.jpg';
 import iconTwo from '../images/iconTwo.jpg';
 import iconThree from '../images/iconThree.jpg';
 import iconFour from '../images/iconFour.jpg';
-import BadgeIcon from './badgeicon/badgeIcon';
 import guy from '../images/Guy.jpg'
 import ladyWhite from '../images/ladyWhite.jpg'
 import ladyGrey from '../images/ladyGrey.jpg'
@@ -18,14 +17,16 @@ import smallIconTwo from '../images/smallIconThree.jpg';
 import smallIconThree from '../images/smallIconTwo.jpg';
 import smallIconFour from '../images/smallIconOne.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Footer from './Footer'
-export default function Mainpage() {
+import Footer from '../Layout/Footer'
+import Header from '../Layout/header'
+export default function Mainpage({ cartItems, handleAddToCart, totalCartCount }) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const offset = 0;
+
+    const offset = 1;
     const limit = 8;
-    useEffect(() => {
+     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
             try {
@@ -36,22 +37,16 @@ export default function Mainpage() {
             catch (err) {
                 setError(err);
             }
+
         }
         fetchData();
+
     }, [offset, limit])
+
     return (
         <div className={styles.mainContainer}>
-            <div className={styles.header}>
-                <div className={styles.headerText}>
-                    <h1 className={styles.marckScriptRegular}>Germiston Vintage Clothing</h1>
-                </div>
-                <div className={styles.headerIcons}>
-                    <button className={styles.iconButtonOne}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-                    <button className={styles.iconButtonTwo}><FontAwesomeIcon icon={faHeart} /></button>
-                    <button className={styles.iconButtonThree}><BadgeIcon icon={faBagShopping} count={0} /></button>
-                    <button className={styles.iconButtonFour}><FontAwesomeIcon icon={faUser} /></button>
-                </div>
-            </div>
+            <Header cartCount={totalCartCount} />
+
             <div className={styles.middleContainer}>
                 <div className={styles.contentContainer}>
                     <div className={styles.textContent}>
@@ -121,7 +116,7 @@ export default function Mainpage() {
                                 <h3 className={styles.productTitle}>{product.title}</h3>
                                 <div className={styles.addCartSection}>
                                     <p className={styles.productPrice}>${product.price}</p>
-                                    <button className={styles.cartShoppingButton}><span>+</span><FontAwesomeIcon icon={faBagShopping} className={styles.cartShopping} /></button>
+                                    <button className={styles.cartShoppingButton} onClick={() => handleAddToCart(product)}><span>+</span><FontAwesomeIcon icon={faBagShopping} className={styles.cartShopping} /></button>
                                 </div>
                             </div>
 

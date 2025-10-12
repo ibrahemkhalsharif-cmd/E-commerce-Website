@@ -13,6 +13,7 @@ html {
 
 .mainContainer {
     background-color: #F9DBBD;
+
 }
 
 .headerIcons {
@@ -20,6 +21,17 @@ html {
     width: 20%;
     align-items: center;
 
+}
+.searchSection{
+    width: 20%;
+     margin: 1% 15% 0 0;
+   
+}
+.searchInput{
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: #4F517D;
+   
 }
 
 .headerText {
@@ -34,6 +46,18 @@ html {
     font-style: normal;
     border-bottom: none;
 
+}
+.shoppingCartHeader{
+    font-family:  'Marck Script', cursive;
+    text-align: center;
+    color: #4F517D;
+    font-size: clamp(2rem , 3rem, 4rem);
+}
+.emptyCart{
+     font-family:  'Marck Script', cursive;
+    text-align: center;
+    color: #4F517D;
+    font-size: clamp(1rem , 1.5rem, 2rem);
 }
 
 .iconButtonOne,
@@ -312,8 +336,12 @@ html {
     height: 200px;
     width: 200px;
 }
+.cardSection{
+    margin-top: 10%;
+}
 .productTitle{
     color: #4F517D;
+    width: clamp(6rem, 10rem, 15rem);
     font-size: clamp(0.5rem, 0.6vw, 2rem);
     font-family: sans-serif;
 }
@@ -446,6 +474,7 @@ html {
 .footer{
     width: 100%;
     padding-top: 5%;
+    margin-bottom:0%;
 }
 .footerTextContainer{
     display: flex;
@@ -529,5 +558,16 @@ html {
     gap: 5px;
     margin-left: 30%;
     
+    
+}
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #F9DBBD;
+    min-height: 100vh;
+}
+.footer{
+    margin-top: auto;
+    padding: 0;
     
 }

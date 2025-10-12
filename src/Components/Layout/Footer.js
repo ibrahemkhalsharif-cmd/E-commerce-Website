@@ -1,4 +1,4 @@
-import styles from './mainpage.module.css';
+import styles from '../Mainpage/mainpage.module.css';
 import { faFacebook, faInstagram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
